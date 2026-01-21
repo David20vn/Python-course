@@ -63,9 +63,47 @@ def get_grade( n ):
 main ()
 """
 
-#
 
+#Loops 
 
+#simple while and for
+"""
+def main():
+  number = get_number()
+  meow( number )
 
+def get_number ():
+  while True:
+    value = int( input( "How many times do you want to meow?: " ))
+    if value < 0:
+      continue
+    else:
+      return value 
 
+def meow( n ):
+  for _ in range( n ):
+    print( "meow" )
 
+main()
+"""
+
+# loops using dictionaries
+"""
+def main():
+  people = [
+    { "name": "David", "place": "Pereira", "pet": "cat" },
+    { "name": "Juan", "place": "Armenia", "pet": "dog" },
+    { "name": "Eve", "place": "Choco", "pet": "rabbit" },
+    { "name": "Ana", "place": "Cali", "pet": None }
+  ]
+
+  print_people( people )
+
+def print_people( list ):
+  for person in list:
+    for element in person:
+      print ( f"{ element }: { person[ element ]} " )
+    print()
+  
+main()
+"""
