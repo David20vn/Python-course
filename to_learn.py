@@ -107,3 +107,25 @@ def print_people( list ):
   
 main()
 """
+
+
+# Exceptions
+
+#Secure users input
+"""
+def main():
+  number = get_number( "What's the number?: " )
+  print( f"The number is {number}" )
+
+def get_number( prompt ):
+  while True:
+    try:
+      return int( input( prompt ))
+    except:
+      print ( "The response should be an integer" ) # I could use "pass" too
+
+main()
+"""
+
+
+# Libraries
