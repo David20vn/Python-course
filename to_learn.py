@@ -139,3 +139,40 @@ def main():
 
 main()
 """
+
+#request
+"""
+import requests
+import sys
+import json
+
+def main():
+
+  if len( sys.argv ) != 2:
+    sys.exit( "Must have 2 arguments." )
+  
+  response = requests.get( "https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1] )
+
+  results = response.json()["results"]
+
+  for result in results:
+    print ( result ["trackName"])
+
+
+main()
+"""
+
+#own librarie
+"""
+import sys
+from own_librarie import hello
+from own_librarie import bye
+
+def main():
+  hello( sys.argv[1] )
+  bye( sys.argv[1] )
+
+
+main()
+"""
+
