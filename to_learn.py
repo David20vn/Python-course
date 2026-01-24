@@ -128,4 +128,14 @@ main()
 """
 
 
-# Libraries
+# Libraries and packages
+"""
+import cowsay
+import sys
+
+def main():
+  if len( sys.argv ) == 2:
+    cowsay.cow ( "hello\n"+sys.argv[1])
+
+main()
+"""
