@@ -13,16 +13,18 @@ main()
 
 #csv files
 
+import sys
+import csv
+
 def main():
 
-  flag = 1
+  name = sys.argv[1]
+  house = sys.argv[2]
+  pet = sys.argv[3]
 
-  with open ( "names.csv", "a" ) as file:
-    while flag == 1:
-      name = input( "\nName: ")
-      home = input( "Home: ")
-      pet = input( "pet: ")
-      file.write( name + "," + home + "," + pet + "\n" )
-      flag = int( input( "\n1. Add person\n0. Stop adding\nAnswer: " ))
+  with open( "names.csv", "a", newline="" ) as file:
+    writer = csv.writer( file )
+    writer.writerow([ name, house, pet ])
+
 
 main()
