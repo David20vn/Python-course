@@ -176,3 +176,16 @@ def main():
 main()
 """
 
+#Unit tests
+"""
+from own_librarie import hello
+import sys
+
+
+def main():
+  print( hello( sys.argv[1] ))
+  print( hello() )
+
+
+main()
+"""

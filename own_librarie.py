@@ -14,3 +14,12 @@ def bye( name ):
 if __name__ == "__main__":
   main()
 """
+
+#fuction for unit tests
+"""
+import pytest
+
+
+def hello( name = "world" ):
+  return f"Hello, {name}"
+"""
