@@ -199,5 +199,10 @@ def main ():
 
   email = input( "What's you email?: ")
 
-  if re.search ( r"^.+@.+\.com$" ):
-    
+  if re.search ( r"^[.\w]+@\w+(\.\w+)*\.(com|co)$", email ):
+    print( "Valid email." )
+  else: 
+    print( "Invalid email." )
+
+
+main()
