@@ -192,17 +192,30 @@ main()
 
 
 #Regular Expressions
-
+"""
 import re
 
 def main ():
 
   email = input( "What's you email?: ")
 
-  if re.search ( r"^[.\w]+@\w+(\.\w+)*\.(com|co)$", email ):
+  if re.search ( r"^[.\w]+@(\.\w+)*\w+\.(com|co)$", email ):
     print( "Valid email." )
   else: 
     print( "Invalid email." )
 
 
 main()
+"""
+"""
+import re
+
+def main():
+  url = input ("Write your twitter url: ")
+
+  if matches := re.search ( "^(?:https?://)?(?:www.)?twitter\.com/([a-z0-9_]+)$", url, re.IGNORECASE ):
+    print ( f"Your username is: {matches.group(1)}")
+
+
+main()
+"""
